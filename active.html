@@ -19,16 +19,26 @@
     </style>
 </head>
 <body>
+    <ul>
+        <li>1212</li>
+    </ul>
+    <span>222</span>
+    <p>33333</p>
+    <div>4444</div>
     正常情况下：
     <a href="javascript:" class="active-btn">按下</a><br>
     包含JS:
     <a href="javascript:" id="button" class="active-btn">按下</a>
     <script>
-        var button = document.getElementById('button');
-        if(button.addEventListener){
-            button.addEventListener("mousedown",function (event) {
-                event.preventDefault();
-              })
+        window.onload = function () {
+            var oLi = document.getElementsByTagName('li')
+            console.log(oLi)
+            var button = document.getElementById('button');
+            if(button.addEventListener){
+                button.addEventListener("mousedown",function (event) {
+                    event.preventDefault();
+                })
+            }
         }
     </script>
 </body>
